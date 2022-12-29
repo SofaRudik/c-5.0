@@ -10,7 +10,8 @@ void ReleaseArray (double [] array)
      for (int i=0; i<array.Length;i++) 
     { 
         if(array[i]>max) max=array[i];
-        else min =array[i];
+        else min =array[0];
+        if(array[i]<=min) min=array[i];
     } 
     Console.WriteLine($" Макс= {max} и мин=  {min} разница= {max-min}") ;
 }
